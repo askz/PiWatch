@@ -5,6 +5,8 @@
   "dependencies": {
     "socket.io": "0.9.10",
     "express": "~4.9.5",
-    "requirejs": "~2.1.15"
+    "requirejs": "~2.1.15",
+    "httpp-proxy": "0.10.3",
+    "http-proxy": "1.8.1"
   }
 }
