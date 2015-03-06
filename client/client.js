@@ -1,21 +1,26 @@
-$(document).ready(function() {
-    var connection = io.connect('/picture'), 
-        $img = $('#frame'), 
-        $counter = $('#counter'), 
-        $clients = $('#clients'), 
-        reloadCount = 0;
+var reloadEvery = 200;
+var reload = 0;
+$(document).ready(
+function () {
+var connection = io.connect('http://10.104.10.84:8081/');
+var img = $('#frame');
 
-    connection.on('frame', function(frame) {
-        if (frame.data.length < 10000) {
-            return;
-        }
-        $img.attr('src', 'data:image/png;base64,' + frame.data);
-        $counter.text('Frames: ' + reloadCount);
-        $clients.text('Clients: ' + frame.clients);
-        reloadCount += 1;
-    });
 
-    connection.on('clients', function(clients) {
-        $clients.text = clients;
-    });
+connection.on('frame', function (frame) {
+  if(frame.data.length < 10000)return;
+  img.attr('src','data:image/png;base64,' + frame.data);
+  var counterspan = $('#counter');
+  counterspan.text('Frames: ' + reload);
+  reload += 1;
+  var clientSpan = $('#clients');
+  clientSpan.text('Clients: ' + frame.clients);
 });
+
+connection.on('clients',function(clients){
+	console.log(clients);
+	var clientspan = $('#clients');
+	clientspan.text = clients;
+}
+
+)});
+
