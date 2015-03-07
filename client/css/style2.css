@@ -1,0 +1,140 @@
+body {
+  padding: 2em;
+  background: #eee;
+  box-sizing: border-box;
+  background-image:  url("../img/body_background.jpg");
+  background-size:cover;
+  padding: 2% 20%;
+
+}
+
+p { margin: 1em; }
+
+.row {
+  margin-bottom: 2em;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col {
+  background: white;
+  float: left;
+  margin-right: 5%;
+}
+.col:last-of-type {
+  margin-right: 0;
+}
+
+.thirds,
+.one-third {
+  width: 30%;
+}
+.two-thirds {
+  width: 65%;
+}
+.three-thirds {
+  width: 99%;
+}
+
+@media (max-width: 400px) {
+  .frame { border: 6px solid white; }
+  .col { margin-right: 0; margin-bottom: .5em;  width: 100%; }
+}
+
+@media (max-width: 300px) {
+  .col { background: orange; }
+  .one-third { display: none; }
+}
+
+#camera_rec {
+    width: 35px;
+    height: 35px;
+    background-size: 32px 32px;
+    background-image: url("../img/start_rec.png");
+    border-radius: 45%;
+}
+
+
+
+  
+.round { border-radius:1000px; }
+
+.base {
+  position:relative;
+  width:50px;
+  height:30px;
+  padding:6px 6px 6px;
+  background:#f8f8f8;
+  box-shadow:inset 0px 0px 6px rgba(0,0,0,0.33);
+  transition: all 0.125s ease-out;
+  }
+
+.switch {
+  position:relative;
+  width:20px;
+  height:20px;
+  left:0px;
+  background:red;
+  box-shadow:inset 0px 0px 6px rgba(0,0,0,0.33);
+  transition: all 0.125s ease-out;
+  color:#fff;
+  }
+
+.symbol {
+  position:absolute;
+  margin:3px;
+  width:8px;
+  height:8px;
+  background:transparent;
+  border:3px solid #fff;
+  }
+
+.label {
+  position:relative;
+  margin: 0 auto;
+  color:red;
+  }
+  .label:after { content:"Off"; }
+
+.toggleBase{
+  background:#fcfcfc;
+  box-shadow:inset 0px 0px 3px rgba(0,0,0,0.33);
+  }
+
+.toggleSwitch{
+  left:20px;
+  width:20px;
+  height:20px;
+  background:green;
+  box-shadow:inset 0px 0px 10px       rgba(0,0,0,0.33);
+  }
+
+.toggleSymbol{
+  position:absolute;
+  margin:3px 4px;
+  left:4px;
+  width:4px;
+  height:14px;
+  background:#fff;
+  border:0px solid #fff;
+  border-radius:1000px;
+  }
+
+.toggleLabel { color:green; }
+  .toggleLabel:after{ content:"On"; }
+
+
+
+#cam_stream{
+  width:480px; 
+  height:360px;
+
+}
+
+
+
+
