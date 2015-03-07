@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var requirejs = require('requirejs');
 
 requirejs.config({
@@ -6,6 +7,7 @@ requirejs.config({
 
 requirejs([
     'http',
+    'http-proxy',
     'express',
     'socket.io',
     'fs',
@@ -13,37 +15,41 @@ requirejs([
 
 function(
     http,
+    httpProxy,
     express,
     socketio,
     fs,
     child_process) {
 
-    var lastImage = null,
-        noImage = false,
-        clients = 0,
-        motionTargetDirectory = '/tmp/motion/',
+    var clients = 0,
         motionConfFile = __dirname + '/motion.conf';
 
-   	startMotion();
 
-    var app = express();
-        app.set('port', process.env.PORT || '8888');
+   	require('dns').lookup(require('os').hostname(), function (err, ip, fam) {
+		var target = 'http://' + '127.0.0.1' +':8081';
+		httpProxy.createProxyServer({target:target}).listen(8080);
+		console.log("Started at " + target);
+	})
 
-    //serves out index.html
-    app.get('/', function(req, res) {
-        res.sendFile(__dirname + '/client/index.html');
-    });
+    // var app = express();
+    //     app.set('port', process.env.PORT || '8888');
 
-    //serves out index.html
-    app.get('/client.js', function(req, res) {
-        res.sendFile(__dirname + '/client/client.js');
-    });
+    // //serves out index.html
+    // app.get('/', function(req, res) {
+    //     res.sendFile(__dirname + '/client/index.html');
+    // });
 
-    var server = http.createServer(app);
+    // //serves out index.html
+    // app.get('/client.js', function(req, res) {
+    //     res.sendFile(__dirname + '/client/client.js');
+    // });
 
-    server.listen(app.get('port'), function(){
-        console.log('server listening on port ' + app.get('port'));
-    });
+    // var server = http.createServer(app);
+
+    // server.listen(app.get('port'), function(){
+    //     console.log('server listening on port ' + app.get('port'));
+    // });
+
 
 
     function startMotion() {
@@ -51,7 +57,11 @@ function(
         var motion = exec('motion -c ' + motionConfFile + ' &', function(error, stdout, stderr) {
             if(error) { return; }
             console.log(motion.pid);
+	    console.log("Motion started;");	    
         });
     }
+    
+     startMotion();
+
 
 });
