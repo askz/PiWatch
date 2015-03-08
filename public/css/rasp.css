@@ -1,0 +1,71 @@
+body {
+  background: #eee;
+}
+
+.loader {
+  text-align: center;
+  margin-top: 40%;
+}
+
+.ball {
+  display: inline-block;
+  height: 55px;
+  width: 55px;
+  background: #363;
+  border-radius: 0;
+  animation: blob .7s infinite linear alternate;
+  transform: rotateZ(15deg);
+  position: relative;
+}
+
+.ball:before {
+  content: '';
+  background: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transform: rotateZ(45deg);
+  animation: blob2 .7s infinite linear alternate;
+}
+
+@keyframes blob {
+  0% {
+    border-radius: 0;
+    transform: rotateZ(0);
+  }
+  25% {
+    border-radius: 25%;
+    transform: rotateZ(45deg);
+  }
+  50% {
+    border-radius: 51%;
+    transform: rotateZ(90);
+  }
+  51% {
+    transform: rotateZ(180deg);
+  }
+  75% {
+    border-radius: 75%;
+    transform: rotateZ(270deg);
+  }
+  100% {
+    border-radius: 0;
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes blob2 {
+  0% {
+    border-radius: 0;
+  }
+  50% {
+    border-radius: 51%;
+  }
+  100% {
+    border-radius: 0;
+  }
+}
+
+@keyframes spin {from{transform: rotateZ(0deg)} to{transform: rotateZ(359deg)}}
