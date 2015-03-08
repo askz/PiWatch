@@ -62,20 +62,32 @@
       <table style="">
         <tr>
             <th id="camera_switch" > 
-                <div class="round base">
+                    <form action="#" method="get">
+                      <div>
+                        <input type="checkbox" id="switch1" name="switch1" class="switch" checked="checked" />
+                        <label for="switch1">Camera</label>
+                      </div>
+                    </form>
+             <!--    <div class="round base">
                       <div class="round switch">
                         <div class="round symbol"></div>
                       </div>
-            </div>
+            </div> -->
             </th>
         </tr>
         <tr id="bluetooth_switch">
             <td class"bluetooth_switch" > 
-                <div class="round base">
+                      <form action="#" method="get">
+                        <div>
+                        <input type="checkbox" id="switch2" name="switch2" class="switch" checked="checked" />
+                        <label for="switch2">Bluetooth</label>
+                        </div>
+                      </form>
+                <!-- <div class="round base">
                       <div class="round switch">
                         <div class="round symbol"></div>
                       </div>
-            </div>
+            </div> -->
             </td>
         </tr>
       </table>
@@ -87,7 +99,7 @@
 
   <div class="col one-third">
 
-      <table style="">
+      <table class="sensor_data" style="">
         <tbody>
           <tr>
             <th > <img id="gaz_ico" src="img/gas-icon.jpg"> </th>
