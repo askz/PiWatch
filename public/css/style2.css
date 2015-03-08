@@ -61,6 +61,11 @@ p { margin: 1em; }
     border-radius: 25%;
       background-size:cover;
 
+
+#camera_ico { 
+  margin-left: 5%;
+}
+
 }
 #time_lapse {
     width: 40px;
@@ -86,6 +91,7 @@ p { margin: 1em; }
   box-shadow:inset 0px 0px 6px rgba(0,0,0,0.33);
   transition: all 0.125s ease-out;
   float: right;
+  margin-left: 116px;
 }
 
 .switch {
@@ -149,7 +155,6 @@ p { margin: 1em; }
 
 #sun{
   margin-left: 12px;
-      line-height:50px;
 }
 #cam_stream{
   width:480px;
@@ -172,6 +177,12 @@ p { margin: 1em; }
   width: 28px;
 
 }
+#gaz_ico{
+  height: 32px;
+  width: 32px;
+
+}
+
 
 tr.bluetooth_switch > td
 {
@@ -179,6 +190,25 @@ tr.bluetooth_switch > td
 }
 
 #{
+
+}
+#temp_info{
+  font-size: 1.6em;
+}
+
+#gaz_info{
+  font-size: 1.6em;
+}
+
+td, th {
+    padding: 11px;
+}
+
+#humidity_ico{
+
+  height: 32px;
+  width: 32px;
+
 
 }
 #temp_info{
