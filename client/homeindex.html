@@ -1,25 +1,25 @@
 <!doctype html>
 <html>
-	<head>
-		<!-- Latest compiled and minified CSS -->
+  <head>
+    <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
 <!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-		<meta charset="utf-8">
-		<title>PiWatch</title>
-		<link rel="stylesheet" href="css/style2.css">
-	</head>
-	<body>
-		<header>			
-		</header>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <title>PiWatch</title>
+    <link rel="stylesheet" href="css/style2.css">
+  </head>
+  <body>
+    <header>      
+    </header>
 
 
 <div class="row">
   <div class="col three-thirds">
-    <p>Two Thirds</p>
+    <p id="title">Two Thirds</p>
   </div>
 </div><!-- row -->
 
@@ -27,40 +27,81 @@
   <div class="col two-thirds" id="camera">
     <i class="fa fa-video-camera fa-3x"> Camera 1</i>
     <p>Take a look @ home</p>
-    <img id="cam_stream" src="">
-   	<button id="camera_rec" onClick=""></button>
+        <table style="width:50%">
+              <tr>
+                    <td id="tdStream" > <img id="cam_stream" src="http://10.104.30.116:8081"></td>
+              </tr>
+              <tr>
+                  <td  align="center" >
+                    <button id="camera_rec" onClick=""></button>
+                    <button id="time_lapse" onClick=""></button>
+
+                  </td>
+
+              </tr>
+        </table>  
   </div>
 
   <div class="col one-third">
       
-      <p><i class="fa fa-cog fa-spin"></i> Controls</p>
-<!--   
-      <div class="round base">
-                <div class="round switch">
-                  <div class="round symbol"></div>
-                </div>
-      </div> -->
+      <p  align="center"><i class="fa fa-cog fa-spin"></i> Controls</p>
     <div class="col one-third">
-      
-
-
-
-
-
-      <p> 
-        <i class="fa fa-video-camera fa-1x"> </i>
-      </p>
-  
-      <div class="round base">
-                <div class="round switch">
-                  <div class="round symbol"></div>
-                </div>
-      </div>
-              
-
+      <table style="">
+        <tr>
+            <th id="camera_ico" > <i class="fa fa-video-camera fa-2x"> </i></th>
+        </tr>
+        <tr>
+            <th > <img id="bt_ico" src="img/bluetooth.png"> </th>
+        </tr>
+      </table>
   </div>
 
 
+  <div class="col one-third">
+
+      <table style="">
+        <tr>
+            <th id="camera_switch" > 
+                <div class="round base">
+                      <div class="round switch">
+                        <div class="round symbol"></div>
+                      </div>
+            </div>
+            </th>
+        </tr>
+        <tr id="bluetooth_switch">
+            <td class"bluetooth_switch" > 
+                <div class="round base">
+                      <div class="round switch">
+                        <div class="round symbol"></div>
+                      </div>
+            </div>
+            </td>
+        </tr>
+      </table>
+
+        
+  </div>
+
+
+  <div class="col one-third">
+
+      <table style="">
+        <tr>
+            <th id="temp_ico" > <i id="sun" class="fa fa-sun-o fa-2x"> </i></th>
+
+        </tr>
+        <tr>
+
+            <th id="temp_info" > 
+              50 °C
+            </th>
+
+        </tr>
+      </table>
+
+        
+  </div>
 
 
 
@@ -80,3 +121,29 @@
 
 	</body>
 </html>
+<!--       <table style="">
+        <tr>
+            <th > 
+            <div class="round base">
+                      <div class="round switch">
+                        <div class="round symbol"></div>
+                      </div>
+            </div>
+          </th>
+        </tr>
+        <tr>
+            <th id="temp" > <span> 50 C% </span></th>
+        </tr>
+      </table>
+
+<table style="">
+        <tr>
+          <th id="humidity_ico" > <i class="fa fa-tint fa-2x"> </i></th>
+                      <th id="temp" > <span> 50 C% </span></th>
+
+
+        </tr>
+        <tr>
+            <th id="temp" > <span> 50 C% </span></th>
+        </tr>
+      </table> -->
