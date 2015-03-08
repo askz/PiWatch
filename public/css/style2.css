@@ -201,21 +201,23 @@ tr.bluetooth_switch > td
 }
 
 table.sensor_data th {
-    padding: 10px;
+    padding: 20px;
+    margin-left: 19px;
 }
+
+table.sensor_data {
+    margin-left: 19px;
+}
+
 
 #humidity_ico{
-
   height: 32px;
   width: 32px;
-
-
 }
+
 #temp_info{
   font-size: 1.6em;
 }
-
-
 
 form
 {
