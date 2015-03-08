@@ -24,7 +24,6 @@ function(
     var clients = 0,
         motionConfFile = __dirname + '/motion.conf';
 
-
    	require('dns').lookup(require('os').hostname(), function (err, ip, fam) {
 		var target = 'http://' + '127.0.0.1' +':8081';
 		httpProxy.createProxyServer({target:target}).listen(8080);
@@ -57,10 +56,10 @@ function(
         var motion = exec('motion -c ' + motionConfFile + ' &', function(error, stdout, stderr) {
             if(error) { return; }
             console.log(motion.pid);
-	    console.log("Motion started;");	    
+	    console.log("Motion started;");
         });
     }
-    
+
      startMotion();
 
 
