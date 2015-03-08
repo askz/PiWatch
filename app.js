@@ -1,5 +1,5 @@
 require('coffee-script/register');
-require( './db' );
+// require( './db' );
 require('./server');
 
 var express = require('express');
