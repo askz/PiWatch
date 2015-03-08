@@ -1,4 +1,6 @@
 require('coffee-script/register');
+require( './db' );
+require('./server');
 
 var express = require('express');
 var path = require('path');
@@ -17,7 +19,6 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
-// app.register('.html', require('jade'));
 
 var env = process.env.NODE_ENV || 'development';
 app.locals.ENV = env;
