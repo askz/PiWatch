@@ -26,8 +26,8 @@ router.get '/api/status', (req, res) ->
 #  res.redirect(req.protocol + '://' + req.host + ':3000/' + req.query);
 #
 router.post '/api/motion/set/:option/:value', (req, res) ->
-  if utils.setMotionOption(req.param('option'), req.param('value))'
-    res.send 'ok'
+  if utils.setMotionOption(req.param('option'), req.param('value'))
+    res.send('ok')
 
 router.get '/api/motion/get/:option', (req, res) ->
    res.send utils.getMotionOption(req.param('option'))
