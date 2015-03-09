@@ -26,11 +26,11 @@ router.get '/api/status', (req, res) ->
 #  res.redirect(req.protocol + '://' + req.host + ':3000/' + req.query);
 #
 router.post '/api/motion/set/:option/:value', (req, res) ->
-  if utils.setMotionOption(req.param('option'), req.param('value'))
+  if utils.setMotionOption(req.params('option'), req.params('value'))
     res.send('ok')
 
 router.get '/api/motion/get/:option', (req, res) ->
-   res.send utils.getMotionOption(req.param('option'))
+   res.send utils.getMotionOption(req.params('option'))
 
 router.get '/api/motion/stream', auth, (req, res) ->
   apiProxy.web req, res, { target: 'http://localhost:8081/' }
@@ -42,8 +42,8 @@ router.get '/stream/html', auth, (req, res) ->
   res.render 'stream.html'
 
 router.post '/login', (req, res) ->
-  login = req.param('login');
-  password = req.param('password');
+  login = req.params('login');
+  password = req.params('password');
   if login = 'admin' && password = 'admin'
     res.send('ok')
 
