@@ -26,6 +26,9 @@ router.get '/api/status', (req, res) ->
 router.get '/api/motion/stream', (req, res) ->
   res.redirect(req.protocol + '://' + req.host + ':8081/')
 
+router.get '/stream/html', (req, res) ->
+  res.render 'stream.html'
+
 router.post '/login', auth, (req, res) ->
   login = req.param('login');
   password = req.param('password');
