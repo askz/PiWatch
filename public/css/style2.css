@@ -219,6 +219,9 @@ table.sensor_data {
   font-size: 1.6em;
 }
 
+
+
+/*BUTTONS*/
 form
 {
   margin: 0px 0;
@@ -286,6 +289,24 @@ input.switch:checked ~ label:after
   margin-left: 2.1em;
 }
 
+
+input{
+  float: right;
+  width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*MENU*/
 div#nav{
   text-align: center;
 }
