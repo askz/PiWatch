@@ -106,45 +106,74 @@
 
 
   <div class="col thirds">
-    <p>webcam_localhost
-        <input type="checkbox" id="camera_btn" name="camera_btn" class="switch" checked="checked" />
-        <label for="camera_btn">&nbsp</label>
+      <p>webcam_localhost
+      <span id="switch">
+         <a href="#" class="toggle toggle-on"></a>
+      </span>
+      </p>
+    <p>output_normal
+      <span id="switch">
+         <a href="#" class="toggle toggle-on"></a>
+      </span>
+
     </p>
-    <p>output_normal        <input type="checkbox" id="camera_btn" name="camera_btn" class="switch" checked="checked" />
-        <label for="camera_btn">&nbsp</label>
+    <p>control_localhost
+      <span id="switch">
+         <a href="#" class="toggle toggle-on"></a>
+      </span>
+
     </p>
-    <p>control_localhost        <input type="checkbox" id="camera_btn" name="camera_btn" class="switch" checked="checked" />
-        <label for="camera_btn">&nbsp</label>
-    </p>
-    <p>control_html_output        <input type="checkbox" id="camera_btn" name="camera_btn" class="switch" checked="checked" />
-        <label for="camera_btn">&nbsp</label>
+    <p>control_html_output
+      <span id="switch">
+         <a href="#" class="toggle toggle-on"></a>
+      </span>
+
     </p>  
-    <p>output_normal        <input type="checkbox" id="camera_btn" name="camera_btn" class="switch" checked="checked" />
-        <label for="camera_btn">&nbsp</label>
+    <p>output_normal
+      <span id="switch">
+         <a href="#" class="toggle toggle-on"></a>
+      </span>
+
     </p>  
-    <p>output_motion        <input type="checkbox" id="camera_btn" name="camera_btn" class="switch" />
-        <label for="camera_btn">&nbsp</label>
+    <p>output_motion
+      <span id="switch">
+         <a href="#" class="toggle toggle-on"></a>
+      </span>
+
     </p>  
-    <p>auto_brightness<input type="checkbox" id="camera_btn" name="camera_btn" class="switch" />
-        <label for="camera_btn">&nbsp</label>
+    <p>auto_brightness
+      <span id="switch">
+         <a href="#" class="toggle toggle-on"></a>
+      </span>
+
     </p>  
-    <p>ffmpeg_cap_new<input type="checkbox" id="camera_btn" name="camera_btn" class="switch" />
-        <label for="camera_btn">&nbsp</label>
+    <p>ffmpeg_cap_new
+      <span id="switch">
+         <a href="#" class="toggle toggle-on"></a>
+      </span>
+
     </p>  
-    <p>ffmpeg_cap_motion<input type="checkbox" id="camera_btn" name="camera_btn" class="switch" />
-        <label for="camera_btn">&nbsp</label>
+    <p>ffmpeg_cap_motion
+      <span id="switch">
+         <a href="#" class="toggle toggle-on"></a>
+      </span>
     </p>  
-    <p>locate<input type="checkbox" id="camera_btn" name="camera_btn" class="switch" />
-        <label for="camera_btn">&nbsp</label>
+    <p>locate
+      <span id="switch">
+         <a href="#" class="toggle toggle-on"></a>
+      </span>
     </p>  
-    <p>text_double<input type="checkbox" id="camera_btn" name="camera_btn" class="switch" />
-        <label for="camera_btn">&nbsp</label>
+    <p>text_double
+      <span id="switch">
+         <a href="#" class="toggle toggle-on"></a>
+      </span>
     </p>  
-    <p>webcam_motion<input type="checkbox" id="camera_btn" name="camera_btn" class="switch" />
-        <label for="camera_btn">&nbsp</label>
-    </p>  
+    <p>webcam_motion
+          <span id="switch">
+         <a href="#" class="toggle toggle-on"></a>
+      </span></p>  
     <p>ffmpeg_timelapse_mode
-        <select>
+        <select id="options_input">
           <option value="daily">daily</option>
           <option value="hourly">hourly</option>
           <option value="weekly-sunday">weekly-sunday</option>
@@ -154,7 +183,7 @@
         </select>
     </p>  
     <p>ffmpeg_video_codec
-        <select>
+        <select id="options_input">
           <option value="mpeg4">mpeg4</option>
           <option value="mpeg1">mpeg1</option>
           <option value="msmpeg4">msmpeg4</option>
@@ -178,4 +207,19 @@
 </div><!-- row -->
 
 	</body>
+  <script type="text/javascript">
+  $('.toggle').click(function(e) {
+  var toggle = this;
+  
+  e.preventDefault();
+  
+  $(toggle).toggleClass('toggle-on')
+    .toggleClass('toggle-off')
+    .addClass('toggle-moving');
+  
+  setTimeout(function() {
+    $(toggle).removeClass('toggle-moving');
+  }, 200)
+});
+</script>
 </html>

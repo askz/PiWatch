@@ -173,8 +173,8 @@ p { margin: 1em; }
 }
 
 #bt_ico{
-  height: 28px;
-  width: 28px;
+  height: 32px;
+  width: 32px;
 
 }
 #gaz_ico{
@@ -209,6 +209,9 @@ table.sensor_data {
     margin-left: 19px;
 }
 
+table#settings_ico tr,th{
+  text-align: right;
+}
 
 #humidity_ico{
   height: 32px;
@@ -222,6 +225,87 @@ table.sensor_data {
 
 
 /*BUTTONS*/
+#switch{
+  float: right;
+}
+#options_input{
+  float: right;
+  width: 40%;
+}
+.toggle {
+  position: relative;
+  display: inline-block;
+  margin: 0 10%;
+  width: 6.2em;
+  height: 29px;
+  color: white;
+  outline: 0;
+  text-decoration: none;
+  border-radius: 100px;
+  border: 2px solid #546E7A;
+  background-color: #263238;
+  transition: all 500ms;
+}
+
+.toggle:active { background-color: #1c2429; }
+
+.toggle:hover:not(.toggle-moving):after { background-color: #455A64; }
+
+.toggle:after {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  line-height: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: white;
+  background-color: #37474F;
+  border: 2px solid;
+  transition: all 500ms;
+}
+
+.toggle-on:after {
+  content: 'On';
+  border-radius: 50px 5px 5px 50px;
+  color: #66BB6A;
+}
+.toggle-off:after {
+  content: 'Off';
+  border-radius: 5px 50px 50px 5px;
+  transform: translate(100%, 0);
+  color: #f44336;
+}
+.toggle-moving { background-color: #1c2429; }
+
+.toggle-moving:after {
+  color: transparent;
+  border-color: #435862;
+  background-color: #222c31;
+  transition: color 0s, transform 500ms, border-radius 500ms, background-color 500ms;
+}
+
+/*
+a.toggler {
+    background: green;
+    cursor: pointer;
+    border: 2px solid black;
+    border-right-width: 15px;
+    padding: 0 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all .2s ;
+}
+
+a.toggler.off {
+    background: red;
+    border-right-width: 2px;
+    border-left-width: 15px;
+}*/
+
+/**/
 form
 {
   margin: 0px 0;
@@ -234,7 +318,7 @@ div
 
 input.switch:empty
 {
-  margin-left: -1999px;
+  margin-left: -9999px;
 }
 
 input.switch:empty ~ label
@@ -362,4 +446,8 @@ nav.menu1 ul li a:hover{
 
 nav.menu1 ul li a:active{
    background: #ccc;
+}
+
+h2{
+  text-align: center;
 }
