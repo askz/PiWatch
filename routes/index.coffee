@@ -2,6 +2,11 @@ auth = require '../auth'
 express = require 'express'
 router = express.Router()
 
+httpProxy = require('http-proxy');
+
+apiProxy = httpProxy.createProxyServer();
+
+
 # GET home page.
 
 router.get '/', auth, (req, res) ->
@@ -23,13 +28,16 @@ router.get '/api/status', (req, res) ->
 #
 #router.get '/api/motion/get/:option', (req, res) ->
 
-router.get '/api/motion/stream', (req, res) ->
-  res.redirect(req.protocol + '://' + req.host + ':8081/')
+router.get '/api/motion/stream', auth, (req, res) ->
+  apiProxy.web req, res, { target: 'http://localhost:8081' }
 
-router.get '/stream/html', (req, res) ->
+router.get '/api/motion/config', auth, (req, res) ->
+  apiProxy.web req, res, { target: 'http://localhost:8082' }
+
+router.get '/stream/html', auth, (req, res) ->
   res.render 'stream.html'
 
-router.post '/login', auth, (req, res) ->
+router.post '/login', (req, res) ->
   login = req.param('login');
   password = req.param('password');
   if login = 'admin' && password = 'admin'
