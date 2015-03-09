@@ -27,7 +27,7 @@ router.get '/api/status', (req, res) ->
 #
 router.post '/api/motion/set/:option/:value', (req, res) ->
   if utils.setMotionOption(req.param('option'), req.param('value))'
-    res.send 200
+    res.send 'ok'
 
 router.get '/api/motion/get/:option', (req, res) ->
    res.send utils.getMotionOption(req.param('option'))
