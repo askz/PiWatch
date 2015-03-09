@@ -2,7 +2,6 @@
  * Created by askz on 09/03/15.
  */
 
-
 module.exports = {
     setMotionOption: function (option, value) {
         var unirest = require('unirest');
@@ -32,9 +31,8 @@ module.exports = {
         var response = request.end();
 
         if (!timedout) {
-            var trolo = response.body.toString().split('\n');
-            var value = trolo[0].split(' = ')[1];
-            return value;
+            var result = response.body.toString().split('\n');
+            return result[0].split(' = ')[1];
         } else {
             return false;
         }

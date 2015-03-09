@@ -22,11 +22,8 @@ router.get '/sign_in', auth, (req, res) ->
 router.get '/api/status', (req, res) ->
   res.send('ok')
 
-#router.get '/api/motion/control', (req, res) ->
-#  res.redirect(req.protocol + '://' + req.host + ':3000/' + req.query);
-#
-router.post '/api/motion/set/:option/:value', (req, res) ->
-  if utils.setMotionOption(req.params.option, req.params.value)
+router.post '/api/motion/set', (req, res) ->
+  if utils.setMotionOption(req.body.option, req.body.value)
     res.send('ok')
 
 router.get '/api/motion/get/:option', (req, res) ->
