@@ -1,4 +1,5 @@
 auth = require '../auth'
+utils = require '../utils'
 express = require 'express'
 router = express.Router()
 
@@ -24,15 +25,18 @@ router.get '/api/status', (req, res) ->
 #router.get '/api/motion/control', (req, res) ->
 #  res.redirect(req.protocol + '://' + req.host + ':3000/' + req.query);
 #
-##router.post '/api/motion/set/:option/:value', (req, res) ->
-#
-#router.get '/api/motion/get/:option', (req, res) ->
+router.post '/api/motion/set/:option/:value', (req, res) ->
+  if utils.setMotionOption(req.param('option'), req.param('value))'
+    res.send 200
+
+router.get '/api/motion/get/:option', (req, res) ->
+   res.send utils.getMotionOption(req.param('option'))
 
 router.get '/api/motion/stream', auth, (req, res) ->
-  apiProxy.web req, res, { target: 'http://localhost:8081' }
+  apiProxy.web req, res, { target: 'http://localhost:8081/' }
 
-router.get '/api/motion/config', auth, (req, res) ->
-  apiProxy.web req, res, { target: 'http://localhost:8082' }
+router.get '/api/motion/config/*', auth, (req, res) ->
+  apiProxy.web req, res, { target: 'http://localhost:8082/' }
 
 router.get '/stream/html', auth, (req, res) ->
   res.render 'stream.html'

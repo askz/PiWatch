@@ -4,8 +4,8 @@ function get(){
     var request = httpSync.request({
         method: 'GET',
         protocol: 'http',
-        host: 'admin:admin@172.17.0.10',
-        port: 556,
+        host: 'admin:admin@localhost',
+        port: 8082,
         path: '/0/config/get?query=' + process.argv[2],
         //    auth: 'admin:admin'
     });
