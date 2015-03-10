@@ -41,11 +41,7 @@ router.get '/stream/html', auth, (req, res) ->
   res.render 'stream.html'
 
 
-#router.post '/login', (req, res) ->
-#  login = req.params('login');
-#  password = req.params('password');
-#  if login = 'admin' && password = 'admin'
-#    res.send('ok')
+
 
 
 #  res.render 'settings.html', { title: 'PiWatch Settings'}
