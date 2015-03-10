@@ -19,7 +19,10 @@
     "mongoose": "^3.8.24",
     "mongoose-user": "0.0.1",
     "morgan": "~1.5.0",
+    "node-gcm": "^0.9.15",
     "node-restful": "^0.1.18",
+    "node-uuid": "^1.4.3",
+    "request-json": "^0.5.2",
     "requirejs": "~2.1.15",
     "serve-favicon": "~2.2.0",
     "socket.io": "0.9.10"

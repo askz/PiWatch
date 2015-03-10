@@ -16,9 +16,9 @@ var routes = require('./routes/index');
 var users = require('./routes/user');
 var app = express();
 
+mongoose.connect("mongodb://localhost/notifications");
+
 // view engine setup
-
-
 
 app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('ejs').renderFile);
@@ -38,21 +38,23 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-mongoose.connect("mongodb://localhost/notifications");
-var Notification = app.notification = restful.model('notification', mongoose.Schema({
-    id: 'string',
-    date_start: 'string',
-    date_end: 'string',
-    type: 'string'
+
+
+
+
+app.use('/', routes);
+
+
+var Notification = app.notification = restful.model("notification", mongoose.Schema({
+    id: { type: String, required: true },
+    date_start: { type: String, required: true },
+    date_end: { type: String, required: true },
+    type: { type: String, required: true }
 }))
     .methods(['get', 'post', 'put', 'delete']);
 
 Notification.register(app, '/notification');
 
-
-
-app.use('/', routes);
-app.use('/users', users);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -40,6 +40,7 @@ router.get '/api/motion/config/*', auth, (req, res) ->
 router.get '/stream/html', auth, (req, res) ->
   res.render 'stream.html'
 
+
 #router.post '/login', (req, res) ->
 #  login = req.params('login');
 #  password = req.params('password');
