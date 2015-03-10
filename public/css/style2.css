@@ -95,7 +95,10 @@ p { margin: 1em; }
 
 }
 
-
+#home_ico{
+  width: 38px;
+  height: 38px;
+}
 #tdStream{
 
     border-top-left-radius: 32px;
@@ -359,7 +362,7 @@ nav.menu1 ul li a img{
 vertical-align: -9px;
 margin: 0;
 padding: 0 0px 0 0;
-opacity: 0.7;
+opacity: 1;
 }
 
 nav.menu1 ul li a{
