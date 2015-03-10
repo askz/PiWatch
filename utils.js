@@ -2,10 +2,15 @@
  * Created by askz on 09/03/15.
  */
 
+var ip =  '10.104.10.84';
+
 module.exports = {
+
+
     setMotionOption: function (option, value) {
         var unirest = require('unirest');
-        var url = 'http://admin:admin@localhost:8082/0/config/set?' + option + '=' + value;
+        var url = 'http://admin:admin@'+ ip +':8082/0/config/set?' + option + '=' + value;
+        console.log(url);
         var request = unirest.get(url);
         request.header('Accept', 'text/plain').end(function (response) {
             return true;
@@ -18,9 +23,9 @@ module.exports = {
         var request = httpSync.request({
             method: 'GET',
             protocol: 'http',
-            host: 'admin:admin@localhost',
+            host: 'admin:admin@'+ ip +'',
             port: 8082,
-            path: '/0/config/get?query=' + option,
+            path: '/0/config/get?query=' + option
         });
 
         var timedout = false;

@@ -23,11 +23,13 @@ router.get '/api/status', (req, res) ->
   res.send('ok')
 
 router.post '/api/motion/set', (req, res) ->
-  if utils.setMotionOption(req.body.option, req.body.value)
-    res.send('ok'.toJSON())
+  utils.setMotionOption req.body.option, req.body.value
+  res.send('ok')
 
 router.get '/api/motion/get/:option', (req, res) ->
-   res.send (utils.getMotionOption(req.params.option).toJSON())
+  variable = utils.getMotionOption req.params.option
+  debugger
+  res.send variable
 
 router.get '/api/motion/stream', auth, (req, res) ->
   apiProxy.web req, res, { target: 'http://localhost:8081/' }
