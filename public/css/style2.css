@@ -159,10 +159,20 @@ table#settings_ico tr,th{
 #switch{
   float: right;
 }
-#options_input{
+.options_input{
   float: right;
   width: 40%;
+  color: green;
+  background: #263238;
+  border: 0.2em solid #263238;
+  border-radius: 25%;
 }
+
+.options_input option {
+      color: green;
+
+}
+
 .toggle {
   position: relative;
   display: inline-block;

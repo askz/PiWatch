@@ -3,7 +3,7 @@
   <head>
     <link rel="icon" 
       type="image/png" 
-      href="../img/fav_piwatch_logo.ico" />
+      href="../img/fav_piwatch_logo.png" />
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
@@ -37,137 +37,146 @@
 
 <div class="row">
   <div class="col thirds">
-    <p>Videodevice<input type="text" name="firstname">
+    <p title="Default:/dev/video0 (FreeBSD: /dev/bktr0)">Videodevice<input type="text" placeholder="Default:/dev/video0 (FreeBSD: /dev/bktr0)" id="videodevice" >
     </p>
-    <p>Width<input type="number" min="0" max="1080" step="2" value="352" name="some-name"/> 
+    <p title="Default: 352">Width<input type="number" min="0" max="1080" step="" value="" placeholder="Default:352" id="width"/> 
     </p>
-    <p>Height<input type="number" min="0" max="20" step="2" value="10" name="some-name"/>
+    <p title="Default:352">Height<input type="number" min="0" max="" step="" value="" placeholder="Default:352" id="height"/>
     </p>
-    <p>Framerate<input type="text" name="firstname">
+    <p title="Values: 2 - 100">Framerate<input type="text" value="" placeholder="Values: 2 - 100" id="framerate">
     </p>  
-    <p>Brightness<input type="text" name="firstname">
+    <p title="Values: 0 - 255">Brightness<input type="text" value="" placeholder="Values: 0 - 255" id="brightness">
     </p>  
-    <p>Contrast<input type="text" name="firstname">
+    <p title="Values: 0 - 255">Contrast<input type="text" value="" placeholder="Values: 0 - 255" id="contrast">
     </p>  
-    <p>Hue<input type="text" name="firstname">
+    <p title="Values: 0 - 255">Hue<input type="text" placeholder="Values: 0 - 255" id="hue" value="" id="hue">
     </p>  
-    <p>Threshold<input type="text" name="firstname">
+    <p title="Values:  1 - 2147483647">Threshold<input type="text" placeholder="Default: 1500" value="" id="threshold">
     </p>  
-    <p>Lightswitch<input type="text" name="firstname">
+    <p title="Values: 0 - 100">Lightswitch<input type="text" placeholder="Default: 0 (disabled)" value="" id="lightswitch">
     </p>  
-    <p>Gap<input type="text" name="firstname">
+    <p title="Values: 0 -  2147483647">Gap<input type="text" placeholder="Default:60" value="" id="gap">
     </p>  
-    <p>max_mpeg_time<input type="text" name="firstname">
+    <p title="Values: 1 - 100">Quality<input type="text" placeholder="Default:75" value="" id="quality">
     </p>  
-    <p>Quality<input type="text" name="firstname">
+    <p title="Values: 0 - infinite">max_mpeg_time<input type="text" placeholder="Default: 3600" value="" id="max_mpeg_time">
     </p>  
-    <p>ffmpeg_timelapse<input type="text" name="firstname">
+    <p title="Values: 0 -  2147483647">ffmpeg_timelapse<input type="text" placeholder="Default: 0 (disabled)" value="" id="ffmpeg_timelapse">
     </p>  
-    <p>ffmpeg_bps<input type="text" name="firstname">
+    <p title="Values: 0 -  9999999">ffmpeg_bps<input type="text" value="" placeholder="Default: 400000" id="ffmpeg_bps">
     </p>  
-    <p>snapshot_interval<input type="text" name="firstname">
+    <p title="Values: 0 -  2147483647">snapshot_interval<input type="text" value="" placeholder="Default: 0 (disabled)" id="snapshot_interval">
     </p>  
     
   </div>
 
 <div class="col thirds">
  
-    <p>text_right<input type="text" name="firstname">
+    <p title="Values: Max 4095 characters">text_right<input type="text" value="" placeholder="Default: %Y-%m-%d\n%T " id="text_right">
     </p>  
-    <p>text_left<input type="text" name="firstname">
+    <p title="Values: Max 4095 characters">text_left<input type="text" value="" placeholder="Default: Not defined " id="text_left">
+    </p> 
+
+
+
+    
+
+    <p title="Values: Max 4095 characters">text_event<input type="text" value="" placeholder="Default: %Y%m%d%H%M%S" id="text_event">
     </p>  
-    <p>text_changes<input type="text" name="firstname">
+    <p title="Values: Max 4095 characters">target_dir<input type="text" value="" placeholder=" Not defined = current working directory " id="target_dir">
     </p>  
-    <p>text_event<input type="text" name="firstname">
+    <p title="Values: Max 4095 characters">snapshot_filename<input type="text" value="" placeholder="Default: %v-%Y%m%d%H%M%S-snapshot " id="snapshot_filename">
     </p>  
-    <p>target_dir<input type="text" name="firstname">
+    <p title="Values: Max 4095 characters">jpeg_filename<input type="text" value="" placeholder="Default: %v-%Y%m%d%H%M%S-%q " id="jpeg_filename">
     </p>  
-    <p>snapshot_filename<input type="text" name="firstname">
+    <p title="Values: Max 4095 characters">movie_filename<input type="text" value="" placeholder="Default: %v-%Y%m%d%H%M%S " id="movie_filename">
     </p>  
-    <p>jpeg_filename<input type="text" name="firstname">
+    <p title="Values: Max 4095 characters">timelapse_filename<input type="text" value="" placeholder="Default: %v-%Y%m%d-timelapse " id="timelapse_filename">
     </p>  
-    <p>movie_filename<input type="text" name="firstname">
+    <p title="Values: 1 - 100">webcam_maxrate<input type="text" value="" placeholder="Default: 1" id="webcam_maxrate">
     </p>  
-    <p>timelapse_filename<input type="text" name="firstname">
+    <p title="Values: 0 - 65535">webcam_port<input type="text" value="" placeholder="Default: 50" id="webcam_port">
     </p>  
-    <p>webcam_maxrate<input type="text" name="firstname">
-    </p>  
-    <p>webcam_port<input type="text" name="firstname">
-    </p>  
-    <p>webcam_quality<input type="text" name="firstname">
+    <p title="Values: 0 - 100">webcam_quality<input type="text" value="" placeholder="Default: 50" id="webcam_quality">
     </p>  
   </div>
 
 
   <div class="col thirds">
+    <p title="Values: 0 - 255">text_changes
+        <span id="switch">
+         <a href="#" id="text_changes" class="toggle toggle-on"></a>
+      </span>
+    </p>  
+
       <p>webcam_localhost
       <span id="switch">
-         <a href="#" class="toggle toggle-on"></a>
+         <a href="#" id="webcam_localhost" class="toggle toggle-on"></a>
       </span>
       </p>
     <p>output_normal
       <span id="switch">
-         <a href="#" class="toggle toggle-on"></a>
+         <a href="#" id="output_normal" class="toggle toggle-on"></a>
       </span>
 
     </p>
     <p>control_localhost
       <span id="switch">
-         <a href="#" class="toggle toggle-on"></a>
+         <a href="#" id="control_localhost" class="toggle toggle-on"></a>
       </span>
 
     </p>
     <p>control_html_output
       <span id="switch">
-         <a href="#" class="toggle toggle-on"></a>
+         <a href="#" id="control_html_output" class="toggle toggle-on"></a>
       </span>
 
     </p>  
     <p>output_normal
       <span id="switch">
-         <a href="#" class="toggle toggle-on"></a>
+         <a href="#" id="output_normal" class="toggle toggle-on"></a>
       </span>
 
     </p>  
     <p>output_motion
       <span id="switch">
-         <a href="#" class="toggle toggle-on"></a>
+         <a href="#" id="output_motion" class="toggle toggle-on"></a>
       </span>
 
     </p>  
     <p>auto_brightness
       <span id="switch">
-         <a href="#" class="toggle toggle-on"></a>
+         <a href="#" id="auto_brightness" class="toggle toggle-on"></a>
       </span>
 
     </p>  
     <p>ffmpeg_cap_new
       <span id="switch">
-         <a href="#" class="toggle toggle-on"></a>
+         <a href="#" id="ffmpeg_cap_new" class="toggle toggle-on"></a>
       </span>
 
     </p>  
     <p>ffmpeg_cap_motion
       <span id="switch">
-         <a href="#" class="toggle toggle-on"></a>
+         <a href="#" id="ffmpeg_cap_motion" class="toggle toggle-on"></a>
       </span>
     </p>  
     <p>locate
       <span id="switch">
-         <a href="#" class="toggle toggle-on"></a>
+         <a href="#" id="locate" class="toggle toggle-on"></a>
       </span>
     </p>  
     <p>text_double
       <span id="switch">
-         <a href="#" class="toggle toggle-on"></a>
+         <a href="#" id="text_double" class="toggle toggle-on"></a>
       </span>
     </p>  
     <p>webcam_motion
           <span id="switch">
-         <a href="#" class="toggle toggle-on"></a>
+         <a href="#" id="webcam_motion" class="toggle toggle-on"></a>
       </span></p>  
     <p>ffmpeg_timelapse_mode
-        <select id="options_input">
+        <select id="ffmpeg_timelapse_mode" class="options_input">
           <option value="daily">daily</option>
           <option value="hourly">hourly</option>
           <option value="weekly-sunday">weekly-sunday</option>
@@ -177,7 +186,7 @@
         </select>
     </p>  
     <p>ffmpeg_video_codec
-        <select id="options_input">
+        <select id="ffmpeg_video_codec" class="options_input">
           <option value="mpeg4">mpeg4</option>
           <option value="mpeg1">mpeg1</option>
           <option value="msmpeg4">msmpeg4</option>
