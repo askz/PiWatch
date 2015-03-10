@@ -41,5 +41,24 @@ module.exports = {
         } else {
             return false;
         }
+    },
+
+    sendSms: function (number, body){
+        var sys = require('sys')
+        var exec = require('child_process').exec;
+        var child;
+
+        var fonc = "./tools/sendsms.sh " + number + " \"" + body + "\""
+        // executes `pwd`
+        child = exec(fonc, function (error, stdout, stderr) {
+            console.log('stdout: ' + stdout);
+            console.log('stderr: ' + stderr);
+            if (error !== null) {
+                console.log('exec error: ' + error);
+            }
+        });
     }
+
+
+
 };
