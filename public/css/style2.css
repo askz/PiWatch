@@ -21,9 +21,9 @@ p { margin: 1em; }
 }
 
 .col {
-  background: white;
+  background: lightgray;
   float: left;
-  border-radius: 3%;
+  border-radius: 1%;
 
   margin-right: 1%;
   margin-left: 1%;
@@ -159,7 +159,7 @@ p { margin: 1em; }
 #cam_stream{
   width:480px;
   height:360px;
-  padding: 2%;
+  padding: 0%;
   border: 3px solid black;
   border-radius: 2%;
 
