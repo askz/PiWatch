@@ -377,12 +377,6 @@ nav.menu1 ul li a{
 }
 
 
-nav.menu1 ul li a:hover{
-    background: #eee;
-    color: #000;
-    padding: 15px 40px;
-}
-
 nav.menu1 ul li a:active{
    background: #ccc;
 }
