@@ -137,7 +137,7 @@ table.sensor_data th {
 }
 
 table.sensor_data {
-    margin-left: 19px;
+    margin-left: 15%;
 }
 
 table#settings_ico tr,th{
@@ -391,6 +391,9 @@ nav.menu1 ul li a:active{
 }
 
 h2{
+  text-align: center;
+}
+h1{
   text-align: center;
 }
 
