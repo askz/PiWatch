@@ -2,7 +2,7 @@
  * Created by askz on 09/03/15.
  */
 
-var ip =  '10.104.10.84';
+var ip =  'localhost    ';
 
 module.exports = {
 

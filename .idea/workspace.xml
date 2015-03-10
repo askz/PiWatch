@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b02eb5c2-b718-404b-8e5d-64ffa1b6a360" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.coffee" afterPath="$PROJECT_DIR$/routes/index.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils.js" afterPath="$PROJECT_DIR$/utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PiWatch.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,10 +29,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.coffee" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.coffee" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/index.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.403481" vertical-offset="180" max-vertical-offset="825">
+            <state vertical-scroll-proportion="0.0" vertical-offset="103" max-vertical-offset="825">
               <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
               <folding />
             </state>
@@ -89,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utils.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="utils.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/utils.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.094936706" vertical-offset="0" max-vertical-offset="765">
+              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -129,8 +129,8 @@
         <option value="$PROJECT_DIR$/stag/set.js" />
         <option value="$PROJECT_DIR$/test.js" />
         <option value="$PROJECT_DIR$/motion/motion.conf" />
-        <option value="$PROJECT_DIR$/utils.js" />
         <option value="$PROJECT_DIR$/routes/index.coffee" />
+        <option value="$PROJECT_DIR$/utils.js" />
       </list>
     </option>
   </component>
@@ -561,12 +561,12 @@
       <option name="number" value="Default" />
       <updated>1425648163220</updated>
       <workItem from="1425648170272" duration="831000" />
-      <workItem from="1425975903895" duration="1026000" />
+      <workItem from="1425975903895" duration="1163000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12471000" />
+    <option name="totallyTimeSpent" value="12608000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="22" width="1227" height="778" extended-state="6" />
@@ -881,18 +881,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils.js">
+    <entry file="file://$PROJECT_DIR$/routes/index.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="103" max-vertical-offset="825">
+          <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.coffee">
+    <entry file="file://$PROJECT_DIR$/utils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.403481" vertical-offset="180" max-vertical-offset="825">
-          <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.094936706" vertical-offset="0" max-vertical-offset="765">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
           <folding />
         </state>
       </provider>
