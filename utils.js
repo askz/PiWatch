@@ -2,7 +2,7 @@
  * Created by askz on 09/03/15.
  */
 
-var ip =  'localhost';
+var ip =  '10.104.10.84';
 
 module.exports = {
 
@@ -25,7 +25,7 @@ module.exports = {
             protocol: 'http',
             host: 'admin:admin@'+ ip +'',
             port: 8082,
-            path: '/0/config/get?query=' + option,
+            path: '/0/config/get?query=' + option
         });
 
         var timedout = false;
