@@ -14,9 +14,10 @@
   </head>
   <body>
     <header>      
-
 <div class="row">
+
   <div id="nav">
+
   <nav class="menu1">
     <ul>
         <li> <a href="#"><img src="http://cdn1.iconfinder.com/data/icons/dortmund/Dortmund-32x32/home.png">Home</a> </li>
@@ -30,9 +31,11 @@
 
 
 <div class="row">
+
   <div class="col two-thirds" id="camera">
-    <i id="camera_ico" class="fa fa-video-camera fa-3x"> </i>
-    <p>&nbsp</p>
+       <img id="logo" src="../img/piwatch_logo.png">
+
+    <!-- <i id="camera_ico" class="fa fa-video-camera fa-3x"> </i> -->
         <table style="width:50%">
               <tr>
                     <td id="tdStream" > <img id="cam_stream" src="/api/motion/stream"></td>
@@ -51,23 +54,25 @@
   <div class="col one-third">
       
       <p  align="center"><i class="fa fa-cog fa-3x"></i> <h2>Controls</h2> </p>
+
     <div class="col one-third">
+
       <table id="settings_ico" style="width:100%;">
         <tr>
             <th id="camera_ico" > <i class="fa fa-video-camera fa-2x"> </i></th>
         </tr>
         <tr>
-            <th > <i class="fa fa-street-view fa-2x"> </th>
+            <th id="motion_ico" > <i class="fa fa-street-view fa-2x"> </i> </th>
         </tr>
         <tr>
-            <th id="camera_ico" > <i class="fa fa-bell fa-2x"></i></th>
+            <th id="notif_ico" > <i class="fa fa-bell fa-2x"></i> </th>
         </tr>
 
         <tr>
-            <th id="camera_ico" > <i class="fa fa-envelope fa-2x"> </i></th>
+            <th id="sms_ico" > <i class="fa fa-envelope fa-2x"> </i></th>
         </tr>
         <tr>
-            <th > <img id="bt_ico" src="img/beacon_ico.png"> </th>
+            <th id="beacon_ico"> <img id="beacon_ico" src="img/beacon_ico.png"></th>
         </tr>
       </table>
 
@@ -78,33 +83,40 @@
 
       <table style="width:60%;">
         <tr>
-            <th id="camera_switch" > 
+            <td class"bluetooth_switch" > 
             <span id="switch">
                <a href="#" class="toggle toggle-on"></a>
             </span>
-           </th>
+            </td>
         </tr>
-        <tr id="bluetooth_switch">
-            <td class"bluetooth_switch" > 
+        <tr id="motion_switch">
+            <td class"motion_switch" > 
+                <span id="switch">
+                 <a href="#" class="toggle toggle-on"></a>
+              </span> 
+            </td>
+        </tr>
+        <tr id="notification_switch">
+            <td class"notification_switch" > 
                 <span id="switch">
                  <a href="#" class="toggle toggle-on"></a>
               </span> 
             </td>
         </tr>
         <tr>
-            <th id="camera_switch" > 
+            <td class"bluetooth_switch" > 
             <span id="switch">
                <a href="#" class="toggle toggle-on"></a>
             </span>
-           </th>
+            </td>
         </tr>
 
         <tr>
-            <th id="camera_switch" > 
+            <td class"bluetooth_switch" > 
             <span id="switch">
                <a href="#" class="toggle toggle-on"></a>
             </span>
-           </th>
+            </td>
         </tr>
       </table>
 
@@ -144,27 +156,22 @@
 
 
 
-<script type="text/javascript">
-$('.toggle').click(function(e) {
-  var toggle = this;
-  
-  e.preventDefault();
-  
-  $(toggle).toggleClass('toggle-on')
-    .toggleClass('toggle-off')
-    .addClass('toggle-moving');
-  
-  setTimeout(function() {
-    $(toggle).removeClass('toggle-moving');
-  }, 200)
-});
+    <script type="text/javascript">
+    $('.toggle').click(function(e) {
+      var toggle = this;
+      
+      e.preventDefault();
+      
+      $(toggle).toggleClass('toggle-on')
+        .toggleClass('toggle-off')
+        .addClass('toggle-moving');
+      
+      setTimeout(function() {
+        $(toggle).removeClass('toggle-moving');
+      }, 200)
+    });
 
-// $(document).ready(function(){
-//     $('a.toggler').click(function(){
-//         $(this).toggleClass('off');
-//     });
-// });
-</script>
+    </script>
 
 
 	</body>
