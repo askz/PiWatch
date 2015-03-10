@@ -21,7 +21,7 @@ p { margin: 1em; }
 }
 
 .col {
-  background: lightgray;
+  background: ;
   float: left;
   border-radius: 1%;
 
@@ -84,7 +84,7 @@ p { margin: 1em; }
 }
 
 #sun{
-  margin-left: 12px;
+  padding-right: 25%;
 }
 #cam_stream{
   width:480px;
@@ -104,8 +104,8 @@ p { margin: 1em; }
 
 
 #gaz_ico{
-  height: 32px;
-  width: 32px;
+  height: 36px;
+  width: 36px;
 
 }
 
@@ -124,7 +124,7 @@ tr.bluetooth_switch > td
 
 }
 #temp_info{
-  font-size: 1.6em;
+  font-size: 1em;
 }
 
 #gaz_info{
@@ -132,8 +132,8 @@ tr.bluetooth_switch > td
 }
 
 table.sensor_data th {
-    padding: 20px;
-    margin-left: 19px;
+    padding: 1px;
+    margin-left: 1px;
 }
 
 table.sensor_data {
@@ -147,13 +147,16 @@ table#settings_ico tr,th{
 #humidity_ico{
   height: 32px;
   width: 32px;
+  margin-right: 25%;
 }
 
 #temp_info{
   font-size: 1.6em;
 }
 
-
+#button_container  {
+  padding-top: 2%;
+}
 
 /*BUTTONS*/
 #switch{
@@ -392,7 +395,11 @@ h2{
 }
 
 #logo{
-  height: 20%;
-  width: 20%;
-  margin-left: 35%;
+  height: 11%;
+  width: 11%;
+
+}
+#logo_space{
+  width: auto;
+  height: auto;
 }

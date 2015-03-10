@@ -17,8 +17,9 @@
 <div class="row">
 
   <div id="nav">
+      <nav class="menu1">
+        <img id="logo" src="../img/piwatch_logo.png"> 
 
-  <nav class="menu1">
     <ul>
         <li> <a href="#"><img src="http://cdn1.iconfinder.com/data/icons/dortmund/Dortmund-32x32/home.png">Home</a> </li>
         <li> <a href="settings"><img src="http://cdn1.iconfinder.com/data/icons/dortmund/Dortmund-32x32/special-offer.png">Settings</a> </li>
@@ -33,15 +34,14 @@
 <div class="row">
 
   <div class="col two-thirds" id="camera">
-       <img id="logo" src="../img/piwatch_logo.png">
 
     <!-- <i id="camera_ico" class="fa fa-video-camera fa-3x"> </i> -->
-        <table style="width:50%">
+        <table  style="width:50%">
               <tr>
                     <td id="tdStream" > <img id="cam_stream" src="/api/motion/stream"></td>
               </tr>
               <tr>
-                  <td  align="center" >
+                  <td id="button_container" align="center" >
                     <button id="camera_rec" onClick=""></button>
                     <button id="time_lapse" onClick=""></button>
 
@@ -59,20 +59,20 @@
 
       <table id="settings_ico" style="width:100%;">
         <tr>
-            <th id="camera_ico" > <i class="fa fa-video-camera fa-2x"> </i></th>
+            <th id="camera_ico" > <i title="Toggle camera" class="fa fa-video-camera fa-2x"> </i></th>
         </tr>
         <tr>
-            <th id="motion_ico" > <i class="fa fa-street-view fa-2x"> </i> </th>
+            <th id="motion_ico" > <i title="Toggle motion detection" class="fa fa-street-view fa-2x"> </i> </th>
         </tr>
         <tr>
-            <th id="notif_ico" > <i class="fa fa-bell fa-2x"></i> </th>
+            <th id="notif_ico" > <i title="Toggle notifications" class="fa fa-bell fa-2x"></i> </th>
         </tr>
 
         <tr>
-            <th id="sms_ico" > <i class="fa fa-envelope fa-2x"> </i></th>
+            <th id="sms_ico" > <i title="Toggle SMS service" class="fa fa-envelope fa-2x"> </i></th>
         </tr>
         <tr>
-            <th id="beacon_ico"> <img id="beacon_ico" src="img/beacon_ico.png"></th>
+            <th id="beacon_ico"> <img title="Toggle beacon" id="beacon_ico" src="img/beacon_ico.png"></th>
         </tr>
       </table>
 
@@ -85,28 +85,28 @@
         <tr>
             <td class"bluetooth_switch" > 
             <span id="switch">
-               <a href="#" class="toggle toggle-on"></a>
+               <a title="Toggle camera" href="#" class="toggle toggle-on"></a>
             </span>
             </td>
         </tr>
         <tr id="motion_switch">
             <td class"motion_switch" > 
                 <span id="switch">
-                 <a href="#" class="toggle toggle-on"></a>
+                 <a title="Toggle motion detection" href="#" class="toggle toggle-on"></a>
               </span> 
             </td>
         </tr>
         <tr id="notification_switch">
             <td class"notification_switch" > 
                 <span id="switch">
-                 <a href="#" class="toggle toggle-on"></a>
+                 <a title="Toggle notifications" href="#" class="toggle toggle-on"></a>
               </span> 
             </td>
         </tr>
         <tr>
             <td class"bluetooth_switch" > 
             <span id="switch">
-               <a href="#" class="toggle toggle-on"></a>
+               <a title="Toggle SMS services" href="#" class="toggle toggle-on"></a>
             </span>
             </td>
         </tr>
@@ -114,7 +114,7 @@
         <tr>
             <td class"bluetooth_switch" > 
             <span id="switch">
-               <a href="#" class="toggle toggle-on"></a>
+               <a title="Toggle beacon" href="#" class="toggle toggle-on"></a>
             </span>
             </td>
         </tr>
@@ -131,18 +131,22 @@
         <tbody>
           <tr>
             <th > <img id="gaz_ico" src="img/gaz_ico.png"> </th>
-            <th id="temp_ico"> <i id="sun" class="fa fa-sun-o fa-2x"> </i></th>
+            <th >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+            <th id="temp_ico"> <i align="center" id="sun" class="fa fa-sun-o fa-2x"> </i></th>
+            <th >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
             <th > <img id="humidity_ico" src="img/humidity_icon.png"> </th>
-
           </tr>
         <tr>
             <th id="temp_info"> 
               OK
             </th>
+            <th >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
 
             <th id="temp_info" > 
               50 °C
             </th>
+                        <th >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+
             <th id="temp_info" > 
               50 %
             </th>
