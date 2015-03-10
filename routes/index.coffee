@@ -27,7 +27,7 @@ router.post '/api/motion/set', (req, res) ->
   res.send('ok')
 
 router.get '/api/motion/get/:option', (req, res) ->
-   res.send utils.getMotionOption req.params.option.toJSON()
+   res.send (utils.getMotionOption(req.params.option))
 
 router.get '/api/motion/stream', auth, (req, res) ->
   apiProxy.web req, res, { target: 'http://localhost:8081/' }
