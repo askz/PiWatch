@@ -41,8 +41,9 @@ router.get '/stream/html', auth, (req, res) ->
 
 
 
-router.get '/stream/html', auth, (req, res) ->
-  res.render 'stream.html'
+router.get '/beacon/enter', auth, (req, res) ->
+  utils.setMotionOption('webcam_port', '');
+
 
 
 
