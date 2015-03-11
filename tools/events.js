@@ -24,7 +24,7 @@ switch (process.argv[2]) {
             console.log('Notification posted.');
         });
         var exec = require('child_process').exec;
-        exec('./sendsms.sh 0665788455 "PiWatch: Motion detected !\n Livestream\'s up at '+ PWSend.defaultLink +'"', function(error, stdout, stderr) {
+        exec('tools/sendsms.sh 0665788455 "PiWatch: Motion detected !\n Livestream\'s up at '+ PWSend.defaultLink +'"', function(error, stdout, stderr) {
             console.log('SMS sended');
             if (error !== null) {
                 console.log('sms error: ' + error);
