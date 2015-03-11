@@ -6,6 +6,7 @@ var http = require('http'),
     mongoose = require('mongoose');
 
 request = require('request-json');
+
 var client = request.createClient('http://piwatch.zkp.fr/');
 
 var PWSend = require('../NotifMod/PiWatchSender.js')
@@ -20,11 +21,11 @@ switch (process.argv[2]) {
         date_start = timestamp;
         PWSend.setMessage('Motion detected !', PWSend.defaultLink);
         PWSend.send();
-        client.post('notification', {type: eventType, date_start:date_start}, function(err, res, body) {
+        client.post('notification/', {type: eventType, date_start:date_start}, function(err, res, body) {
             console.log('Notification posted.');
         });
         var exec = require('child_process').exec;
-        exec('tools/sendsms.sh 0665788455 "PiWatch: Motion detected !\n Livestream\'s up at '+ PWSend.defaultLink +'"', function(error, stdout, stderr) {
+        exec('tools/sendsms.sh 0665788455 "PiWatch: Motion detected !\n Livestream\'s up at \n'+ PWSend.SMSLink +'"', function(error, stdout, stderr) {
             console.log('SMS sended');
             if (error !== null) {
                 console.log('sms error: ' + error);

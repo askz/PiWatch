@@ -9,6 +9,7 @@ var link = 'http://admin:admin@piwatch.zkp.fr/api/motion/stream';
 
 module.exports = {
     defaultLink : 'http://admin:admin@piwatch.zkp.fr/api/motion/stream',
+    SMSLink : 'http://piwatch.zkp.fr/api/motion/stream',
 
     setPath: function(path) {
         filePath = path;
