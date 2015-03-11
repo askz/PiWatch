@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <link id="fav_ico" rel="icon" 
+      type="image/png" 
+      href="../img/fav_piwatch_logo2.png" />
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <title>About</title>
+    <link rel="stylesheet" href="css/style2.css">
+  </head>
+  <body>
+    <header>      
+<div class="row">
+
+  <div id="nav">
+      <nav class="menu1">
+
+    <ul>
+        <li> <a href="#"><img id="home_ico" src="../img/fav_piwatch_logo2.png">
+          Home</a> </li>
+        <li> <a href="settings"><img src="http://cdn1.iconfinder.com/data/icons/dortmund/Dortmund-32x32/special-offer.png">Settings</a> </li>
+        <li> <a href="about"><img src="http://cdn1.iconfinder.com/data/icons/dortmund/Dortmund-32x32/hire-me.png">About</a> </li>
+    </ul>
+        <!-- <img id="logo" src="../img/beta_banner.png">  -->
+      </nav>
+  </div>
+</div><!-- row -->
+    </header>
+
+
+<div class="row">
+
+ <iframe id='prezi' src="https://prezi.com/embed/wbqaoaqzpn9n/?bgcolor=ffffff&amp;lock_to_path=1&amp;autoplay=0&amp;autohide_ctrls=0#" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" frameborder="0" height="400" width="550"></iframe>
+
+
+  </div>
+
+
+
+
+
+    <script type="text/javascript">
+    $('.toggle').click(function(e) {
+      var toggle = this;
+      
+      e.preventDefault();
+      
+      $(toggle).toggleClass('toggle-on')
+        .toggleClass('toggle-off')
+        .addClass('toggle-moving');
+      
+      setTimeout(function() {
+        $(toggle).removeClass('toggle-moving');
+      }, 200)
+    });
+
+    </script>
+
+
+	</body>
+</html>
