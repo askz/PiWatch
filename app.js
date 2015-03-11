@@ -46,9 +46,9 @@ app.use('/', routes);
 
 
 var Notification = app.notification = restful.model("notification", mongoose.Schema({
-    id: { type: String, required: true },
-    date_start: { type: String, required: true },
-    date_end: { type: String, required: true },
+    id: { type: String, required: false },
+    date_start: { type: String, required: false },
+    date_end: { type: String, required: false },
     type: { type: String, required: true }
 }))
     .methods(['get', 'post', 'put', 'delete']);

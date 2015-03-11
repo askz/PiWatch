@@ -31,7 +31,6 @@ router.post '/api/motion/set', (req, res) ->
 
 router.get '/api/motion/get/:option', (req, res) ->
   variable = utils.getMotionOption req.params.option
-  debugger
   res.send variable
 
 router.get '/api/motion/stream', auth, (req, res) ->
@@ -43,6 +42,10 @@ router.get '/api/motion/config/*', auth, (req, res) ->
 router.get '/stream/html', auth, (req, res) ->
   res.render 'stream.html'
 
+
+
+router.get '/beacon/enter', auth, (req, res) ->
+  utils.setMotionOption('webcam_port', '');
 
 
 
