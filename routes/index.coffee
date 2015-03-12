@@ -16,6 +16,9 @@ router.get '/', auth, (req, res) ->
 router.get '/settings', auth, (req, res) ->
   res.render 'settings.html', { title: 'PiWatch Settings'}
 
+router.get '/about', (req, res) ->
+  res.render 'about.html', { title: 'PiWatch About'}
+
 router.get '/sign_in', auth, (req, res) ->
   res.render 'login.html', { title: 'PiWatch Login'}
 
