@@ -16,8 +16,6 @@ var routes = require('./routes/index');
 var users = require('./routes/user');
 var app = express();
 
-mongoose.connect("mongodb://localhost/notifications");
-
 // view engine setup
 
 app.set('views', path.join(__dirname, 'views'));
@@ -61,6 +59,7 @@ var SMS = app.SMS = restful.model("SMS", mongoose.Schema({
     date: String
 }))
     .methods(['get', 'post']);
+
 SMS.register(app, '/sms');
 
 
