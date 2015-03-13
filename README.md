@@ -1,8 +1,16 @@
 
 ![PiWatch Logo](https://raw.githubusercontent.com/askz/PiWatch/master/public/img/fav_piwatch_logo2.png)
+Features
+===
+* Stream any UVC OR IP Camera over http(s)
+* Motion detection
+* Android app w/ notifications & live stream watch
+* Sensors monitoring
+* SMS alerts
+
+
 Run PiWatch
 ===
-
 Getting the essentials
 ---
 1. Install nodejs.
